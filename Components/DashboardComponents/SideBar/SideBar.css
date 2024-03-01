@@ -1,0 +1,77 @@
+:root{
+    --text-cl-100: #cbcaca;
+    --text-cl-700: #373737;
+    --text-cl-900: #2e2e2e;
+
+    --primary-cl-100: #a3a6f2;
+    --primary-cl-800: #464BD8;
+    --primary-cl-900: #514DDF;
+    --primary-cl-9000: #02042e;
+    --danger-cl-100: #f2a3a3;
+    --danger-cl-900: #2e0202;
+}
+
+
+.sidebar-wrapper{
+    position: relative;
+    top:0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+}
+
+.sidebar-wrapper .user-details-wrapper{
+    position: relative;
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    display: flex;
+}
+
+.sidebar-wrapper .user-avatar-wrapper{
+    height: 60px;
+    width: 60px;
+    background: #c1c1c1;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.sidebar-wrapper .user-main{
+    position: relative;
+}
+
+.sidebar-wrapper .user-main h3{
+    font-size: 1.15rem;
+}
+
+.sidebar-wrapper .user-main p{
+    font-size: 0.8rem;
+}
+
+.sidebar-wrapper .sidenav-link{
+    display: flex;
+    width: 100%;
+}
+
+.sidebar-wrapper .sidenav-link a{
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--primary-cl-9000);
+    margin: 1rem 0rem 0rem 1.5rem;
+    border-radius: 0.7rem;
+    width: 100%;
+    transition: all .5 ease-in-out;
+}
+
+.sidebar-wrapper .sidenav-link a.active{
+    background: var(--primary-cl-100);
+}
+
+.sidebar-wrapper .sidenav-link a:hover{
+    background: var(--primary-cl-100);
+}
+
+.sidebar-wrapper .sidenav-link a.danger:hover{
+    background: var(--danger-cl-100);
+    color: var((--danger-cl-900));
+}

@@ -1,0 +1,119 @@
+:root{
+    --text-cl-400: #d5d5d5;
+    --text-cl-700: #373737;
+    --text-cl-900: #2e2e2e;
+
+    --primary-cl-800: #464BD8;
+}
+
+.faq-wrapper{
+    position: relative;
+    padding: 3rem 5%;
+    display: flex;
+}
+
+.faq-image-wrapper{
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: left;
+}
+
+.faq-image-wrapper img{
+    width: 80%;
+    height: calc(40vw - 100px);
+    border-radius: 1.6rem;
+    scale: 0.5 0.5;
+    opacity: 0;
+
+    animation: faqAnimation linear forwards;
+    animation-timeline: view();
+    animation-range-start: 250px;
+    animation-range-end: 400px;
+}
+
+@keyframes faqAnimation {
+    to{opacity: 1; scale: 1 1;}
+}
+
+
+.faq-content{
+    flex: 1;
+    position: relative;
+}
+
+.faq-content h2{
+    font-size: 2.5rem;
+    color: var(--text-cl-900)
+}
+
+.faq-content p{
+    padding: 1rem 0rem;
+    line-height: 1.7;
+    font-size: 1.2rem;
+    color: var(--text-cl-700);
+}
+
+.faq-accord-wrapper{
+    padding: 0.7rem 1.8rem;
+    margin: 1.7rem 0rem;
+    background: var(--text-cl-400);
+    border-radius: 0.65rem;
+    /* transition: height 1s ease-in-out; */
+}
+
+.faq-accord-wrapper h3{
+    color: var(--text-cl-900);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 0rem 0.7rem 0rem;
+}
+
+.faq-accord-wrapper h3 i{
+    font-size: 1.2rem;
+    color: var(--primary-cl-800)
+}
+
+.faq-accord-wrapper p.visible{
+    font-size: 1.1rem;
+    color: var(--text-cl-700);
+    padding: 0rem 0rem 1rem 0rem;
+    max-height: 150px;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
+
+.faq-accord-wrapper p.invisible{
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0rem;
+    transition: all .5s ease-in-out;
+}
+
+
+
+@media only screen and (max-width: 767px){
+    .faq-wrapper{
+        display: block;
+    }
+
+    .faq-image-wrapper{
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .faq-image-wrapper img{
+        width: 100%;
+        height: calc(100vw - 100px);
+        border-radius: 0.6rem;
+    }
+
+    .faq-accord-wrapper h3{
+        font-size: 1.06rem;
+    }
+
+    .faq-content p{
+        font-size: 1.07rem;
+    }
+}

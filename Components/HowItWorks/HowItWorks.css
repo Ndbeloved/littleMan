@@ -1,0 +1,128 @@
+:root{
+    --text-cl-700: #373737;
+    --text-cl-900: #2e2e2e;
+
+    --primary-cl-800: #464BD8;
+}
+
+
+.how-it-works-wrapper{
+    padding: 3rem 5%;
+    position: relative;
+    display: flex;
+}
+
+.content-wrapper{
+    position: relative;
+    flex: 1;
+}
+
+.content-wrapper h2{
+    font-size: 2.5rem;
+    color: var(--text-cl-900);
+}
+
+.content-wrapper h2 span{
+    color: var(--primary-cl-800);
+}
+
+.content-wrapper p{
+    color: var(--text-cl-700);
+    font-size: 1.2rem;
+    padding: 1.5rem 0rem;
+    line-height: 1.8;
+    padding-right: 0.95rem;
+}
+
+.image-wrapper{
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: right;
+}
+
+.image-wrapper img{
+    width: 80%;
+    max-height: 40vw;
+    height: auto;
+    border-radius: 0.8rem;
+    opacity: 0.1;
+    scale: 0.5 0.5;
+    animation: howItWorksAnimation linear forwards;
+    animation-timeline: view();
+    animation-range-start: 250px;
+    animation-range-end: 400px;
+}
+
+
+@keyframes howItWorksAnimation {
+    to{opacity: 1; scale: 1 1;}
+}
+
+.list-process-wrapper{
+    position: relative;
+    padding: 1rem 0rem;
+    width: 100%;
+}
+
+.list-process-wrapper .process-wrapper{
+    position: relative;
+    display: flex;
+    width: 90%;
+    padding-right: 0.95rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.list-process-wrapper .process-wrapper .process-image{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.list-process-wrapper .process-wrapper .process-image div{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: #c1c1c1;
+    margin-right: 1rem;
+}
+
+.list-process-wrapper .process-wrapper .content{
+    position: relative;
+}
+
+.list-process-wrapper .process-wrapper .content h3{
+    color: var(--text-cl-900);
+    font-size: 1.2rem;
+}
+
+.list-process-wrapper .process-wrapper .content p{
+    color: var(--text-cl-700);
+    font-size: 0.90rem;
+    padding: 0.5rem 0rem;
+}
+
+
+
+
+@media only screen and (max-width: 767px){
+    .how-it-works-wrapper{
+        padding: 3rem 5%;
+        position: relative;
+        display: block;
+    }
+
+    .image-wrapper img{
+        max-height: 80vw;
+        width: 100%;
+    }
+
+    .image-wrapper{
+        justify-content: center;
+    }
+
+    .content-wrapper p{
+        font-size: 1.06rem;
+    }
+}

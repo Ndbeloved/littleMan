@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Poppins;
+    src: url('./assets//Poppins-regular.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.App{
+    width: 100%;
+}

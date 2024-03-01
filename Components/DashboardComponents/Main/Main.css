@@ -1,0 +1,96 @@
+:root{
+    --text-cl-100: #cbcaca;
+    --text-cl-700: #373737;
+    --text-cl-900: #2e2e2e;
+
+    --primary-cl-800: #464BD8;
+    --primary-cl-900: #514DDF;
+}
+
+.dashboard-wrapper{
+    position: relative;
+    display: flex;
+}
+
+.main-content{
+    flex: 1;
+    background: #ffffff;
+    padding: 2.5rem 3%;
+}
+
+.main-content .page-details{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0rem;
+}
+
+.main-content .page-details h1{
+    font-size: 1.1rem;
+    color: var(--text-cl-700);
+}
+
+.main-content .page-details p{
+    font-size: 1rem;
+    color: var(--text-cl-700);
+    cursor: pointer;
+}
+
+.main-content .tradeview{
+    padding: 1.5rem 0rem;
+    background: var(--text-cl-700);
+}
+
+.main-content .action-btns-wrapper{
+    padding: 2.5rem 0rem;
+    display: flex;
+}
+
+.main-content .action-btns-wrapper a{
+    outline: none;
+    border: none;
+    text-decoration: none;
+    border-radius: 0.85rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--text-cl-700);
+    color: #fff;
+    margin-right: 1.1rem;
+    /* box-shadow: 0px 2px 8px rgba(0, 0, 0 , 0.3); */
+    font-size: 0.77rem;
+}
+
+.main-content .action-btns-wrapper a:nth-of-type(1){
+    background: var(--primary-cl-800);
+    color:#fff;
+}
+
+.main-content .account-details-wrapper{
+    display: flex;
+    padding: 1.2rem 0rem;
+}
+
+.main-content .account-details-wrapper .account-detail{
+    margin-right: 1.1rem;
+    display: flex;
+    padding: 1.1rem;
+    border: 1px solid var(--text-cl-100);
+    border-radius: 0.8rem;
+    min-width: 250px;
+    cursor: pointer;
+}
+
+.main-content .account-details-wrapper .account-detail img{
+    width: 100px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.main-content .account-details-wrapper .account-detail div p{
+    font-size: 0.85rem;
+    color: var(--text-cl-700);
+    padding-bottom: 0.5rem;
+}
+
+.main-content .account-details-wrapper .account-detail div h3{
+    font-size: 1.2rem;
+    color: var(--text-cl-700);
+}

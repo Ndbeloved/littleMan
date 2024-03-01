@@ -1,0 +1,134 @@
+.nav-cont{
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-cont .quick-links{
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-cont h1{
+    font-size: 1.5rem;
+}
+
+.nav-cont .quick-links p{
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.nav-cont .quick-links a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #323232;
+}
+
+.sign-in-cont{
+    display: flex;
+    gap: 1rem;
+}
+
+.sign-in-cont a:nth-of-type(1){
+    outline: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #464BD8;
+    color: #464BD8;
+    border-radius: .5rem;
+    background: transparent;
+    font-weight: 500;
+    font-size: .9rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.sign-in-cont a:nth-of-type(2){
+    outline: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: .5rem;
+    background: #464BD8;
+    color: #fff;
+    font-weight: 500;
+    font-size: .9rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.menu-bar{
+    display: none;
+}
+
+.harmbugger-menu{
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .nav-cont .quick-links{
+        display: none;
+    }
+
+    .sign-in-cont{
+        display: none;
+    }
+
+    .menu-bar{
+        display: block;
+    }
+
+    .harmbugger-menu{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        z-index: 50;
+        background: #fff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, .5);
+        padding-top: 2.5rem;
+        max-height: 600px;
+        transition: all .5s ease-in-out;
+        overflow: hidden;
+    }
+
+    .harmbugger-menu.closed{
+        max-height: 0;
+        padding: 0;
+    }
+
+    .harmbugger-menu i{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .harmbugger-menu a{
+        outline: none;
+        text-decoration: none;
+        color: #323232;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .harmbugger-menu a#sign-up{
+        /* border-top: 1px solid #1c661c; */
+        /* border-bottom: 1px solid #1c661c; */
+        color: #464BD8;
+        width: 100%;
+        font-weight: 600;
+    }
+
+    .harmbugger-menu a#login{
+        background: #464BD8;
+        color:#fff;
+        width: 100%;
+        margin-bottom: 0;
+    }
+}
