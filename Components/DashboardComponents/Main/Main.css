@@ -21,7 +21,7 @@
 .main-content .page-details{
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem 0rem;
+    padding: 0rem 0rem 1.5rem 0rem;
 }
 
 .main-content .page-details h1{
@@ -30,7 +30,7 @@
 }
 
 .main-content .page-details p{
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--text-cl-700);
     cursor: pointer;
 }

@@ -9,7 +9,7 @@ import { FaDownload, FaUpload, FaMoneyBill } from 'react-icons/fa6'
 const Main = () => {
   return (
     <section className='dashboard-wrapper'>
-        <SideBar />
+        <SideBar active={0} />
         <div className='main-content'>
             <div className="page-details">
                 <h1>Dashboard</h1>

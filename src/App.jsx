@@ -7,6 +7,7 @@ import {RouterProvider, createBrowserRouter} from 'react-router-dom'
 import Login from '../Components/Login/Login'
 import SignUp from '../Components/SignUp/SignUp'
 import Main from '../Components/DashboardComponents/Main/Main'
+import Withdraw from '../Components/DashboardComponents/Withdraw/Withdraw'
 
 function App() {
 
@@ -31,6 +32,10 @@ function App() {
     {
       path: '/dashboard',
       element: <Main/>
+    },
+    {
+      path: '/dashboard/withdraw',
+      element: <Withdraw/>
     }
   ])
 

@@ -1,8 +1,16 @@
 import { Link } from 'react-router-dom'
 import {FaCoins, FaEuroSign, FaGlobe, FaUser, FaHive, FaRightFromBracket} from 'react-icons/fa6'
 import './SideBar.css'
+import { useEffect, useState } from 'react'
 
-const SideBar = () => {
+const SideBar = ({active}) => {
+  const [activeElement, setActiveElement] = useState(0)
+
+  //to avoid infinite re-renders
+  useEffect(()=>{
+    setActiveElement(active)
+  }, [])
+
   return (
     <div className="sidebar-wrapper">
         <div className='user-details-wrapper'>
@@ -14,19 +22,19 @@ const SideBar = () => {
         </div>
 
         <div className='sidenav-link'>
-            <Link to='/dashboard' className='active'><FaHive/> Dashboard</Link>
+            <Link to='/dashboard' className={(activeElement==0) ? 'active' : ''}><FaHive/> Dashboard</Link>
         </div>
 
         <div className='sidenav-link'>
-            <Link to='/dashboard/withdraw'><FaCoins /> Withdraw</Link>
+            <Link to='/dashboard/withdraw' className={(activeElement==1) ? 'active' : ''}><FaCoins /> Withdraw</Link>
         </div>
 
         <div className='sidenav-link'>
-            <Link to='/dashboard/history'><FaGlobe/> History</Link>
+            <Link to='/dashboard/history' className={(activeElement==2) ? 'active' : ''}><FaGlobe/> History</Link>
         </div>
 
         <div className='sidenav-link'>
-            <Link to='/dashboard/profile'><FaUser/> Profile</Link>
+            <Link to='/dashboard/profile' className={(activeElement==3) ? 'active' : ''}><FaUser/> Profile</Link>
         </div>
 
         <div className='sidenav-link'>
